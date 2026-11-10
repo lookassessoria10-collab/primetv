@@ -1,0 +1,6 @@
+.next
+node_modules
+data
+public
+src/generated
+package-lock.json

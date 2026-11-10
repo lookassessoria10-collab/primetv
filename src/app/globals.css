@@ -1,0 +1,17 @@
+/* Estilos globais mínimos e compatíveis com navegadores de TV.
+   O Tailwind é carregado apenas no painel administrativo (src/app/admin/admin.css). */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  background: #1b0e08;
+  font-family: var(--nf-sans), "Segoe UI", Arial, sans-serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

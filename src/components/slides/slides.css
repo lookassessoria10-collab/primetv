@@ -1,0 +1,610 @@
+/*
+ * Prime TV — estilos das peças.
+ * CSS simples e compatível com Chromium de Smart TVs (sem inset, gap em flex, aspect-ratio ou @layer).
+ * Tudo é desenhado em um palco fixo de 1080×1920 (ou 1920×1080) e escalado por transform.
+ */
+
+.pe-stage-outer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #1b0e08;
+}
+.pe-stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  transform-origin: 50% 50%;
+  background: #1b0e08;
+}
+.pe-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.pe-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* Temas                                                               */
+/* ------------------------------------------------------------------ */
+.pe-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--nf-sans), "Inter", "Segoe UI", Arial, sans-serif;
+  color: var(--pe-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.pe-theme-creme {
+  --pe-bg1: #f8eee5;
+  --pe-bg2: #ead6c4;
+  --pe-ink: #7a3a22;
+  --pe-ink-soft: rgba(122, 58, 34, 0.82);
+  --pe-gold: #c39256;
+  --pe-line: rgba(160, 92, 58, 0.5);
+  --pe-pill-bg: #a9532f;
+  --pe-pill-ink: #fdf3ea;
+  --pe-em: #b5643f;
+  --pe-frame: rgba(255, 255, 255, 0.65);
+  --pe-wave: #b4603d;
+  --pe-shadow: none;
+}
+.pe-theme-rose {
+  --pe-bg1: #cdb0a3;
+  --pe-bg2: #ad8b7e;
+  --pe-ink: #ffffff;
+  --pe-ink-soft: rgba(255, 255, 255, 0.9);
+  --pe-gold: #f3d6ae;
+  --pe-line: rgba(255, 240, 228, 0.55);
+  --pe-pill-bg: #a9532f;
+  --pe-pill-ink: #fff4ea;
+  --pe-em: #fde6d3;
+  --pe-frame: rgba(255, 255, 255, 0.55);
+  --pe-wave: #a9532f;
+  --pe-shadow: 0 6px 24px rgba(80, 40, 25, 0.35);
+}
+.pe-theme-terracota {
+  --pe-bg1: #bd6a43;
+  --pe-bg2: #873d24;
+  --pe-ink: #fff5ec;
+  --pe-ink-soft: rgba(255, 245, 236, 0.88);
+  --pe-gold: #f0cd8e;
+  --pe-line: rgba(240, 205, 142, 0.6);
+  --pe-pill-bg: #f6e8d8;
+  --pe-pill-ink: #7a3a22;
+  --pe-em: #f6d59c;
+  --pe-frame: rgba(255, 230, 205, 0.55);
+  --pe-wave: #6e2f1b;
+  --pe-shadow: 0 6px 30px rgba(60, 20, 8, 0.35);
+}
+.pe-theme-chocolate {
+  --pe-bg1: #4f2918;
+  --pe-bg2: #1f0e07;
+  --pe-ink: #fff7ef;
+  --pe-ink-soft: rgba(255, 247, 239, 0.84);
+  --pe-gold: #ebc57f;
+  --pe-line: rgba(235, 197, 127, 0.55);
+  --pe-pill-bg: #f4e5d3;
+  --pe-pill-ink: #5a2a17;
+  --pe-em: #efc983;
+  --pe-frame: rgba(235, 197, 127, 0.5);
+  --pe-wave: #a8532f;
+  --pe-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+}
+
+.pe-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(120% 75% at 28% 18%, var(--pe-bg1) 0%, var(--pe-bg2) 100%);
+}
+.pe-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.5  0 0 0 0 0.35  0 0 0 0 0.25  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: 0.09;
+  mix-blend-mode: soft-light;
+}
+.pe-decor {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Tipografia e elementos                                              */
+/* ------------------------------------------------------------------ */
+.pe-display {
+  font-family: var(--nf-display), "Bodoni Moda", "Didot", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.04;
+  color: var(--pe-ink);
+  text-shadow: var(--pe-shadow);
+}
+.pe-serif {
+  font-family: var(--nf-serif), "Cormorant Garamond", Georgia, serif;
+}
+.pe-em {
+  font-family: var(--nf-serif), "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--pe-em);
+  letter-spacing: 0;
+}
+.pe-display .pe-em {
+  font-size: 1.12em;
+  line-height: 0.9;
+}
+.pe-eyebrow-pill {
+  display: inline-block;
+  background: var(--pe-pill-bg);
+  color: var(--pe-pill-ink);
+  font-family: var(--nf-sans), "Inter", Arial, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.pe-eyebrow-text {
+  font-family: var(--nf-serif), "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--pe-gold);
+}
+.pe-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+}
+.pe-body {
+  font-family: var(--nf-serif), "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  color: var(--pe-ink-soft);
+  line-height: 1.22;
+  text-shadow: var(--pe-shadow);
+}
+.pe-cta {
+  display: inline-block;
+  background: var(--pe-pill-bg);
+  color: var(--pe-pill-ink);
+  font-family: var(--nf-display), "Bodoni Moda", Georgia, serif;
+  font-weight: 500;
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(40, 15, 5, 0.18);
+  white-space: nowrap;
+}
+.pe-cta-arrow {
+  display: inline-block;
+  margin-left: 0.6em;
+  font-family: var(--nf-sans), Arial, sans-serif;
+  font-weight: 300;
+}
+.pe-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pe-divider-line {
+  height: 2px;
+  background: var(--pe-line);
+}
+.pe-divider-symbol {
+  margin: 0 26px;
+}
+.pe-center {
+  text-align: center;
+}
+
+/* Coluna principal: layout vertical com espaçamentos por margem */
+.pe-col {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ------------------------------------------------------------------ */
+/* Fotografias                                                          */
+/* ------------------------------------------------------------------ */
+.pe-photo {
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.12);
+}
+.pe-photo img,
+.pe-photo video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.pe-photo-zoom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.pe-frame {
+  position: relative;
+  border-radius: 34px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 0 0 2px var(--pe-frame) inset,
+    0 18px 50px rgba(50, 20, 8, 0.18);
+}
+.pe-frame > .pe-photo {
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+}
+.pe-label {
+  position: absolute;
+  left: 50%;
+  bottom: -26px;
+  transform: translateX(-50%);
+  background: #a9532f;
+  color: #fff4ea;
+  font-family: var(--nf-sans), Arial, sans-serif;
+  font-weight: 500;
+  font-size: 34px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 10px 40px 10px 46px;
+  border-radius: 999px;
+  white-space: nowrap;
+  z-index: 2;
+}
+.pe-arch {
+  border-radius: 999px 999px 36px 36px;
+}
+.pe-arch-outline {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  right: -18px;
+  bottom: -18px;
+  border: 2px solid var(--pe-line);
+  border-radius: 999px 999px 48px 48px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Arte pronta                                                          */
+/* ------------------------------------------------------------------ */
+.pe-art-img {
+  position: absolute;
+  display: block;
+}
+.pe-art-blur {
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  right: -60px;
+  bottom: -60px;
+  background-size: cover;
+  background-position: center;
+  filter: blur(46px) brightness(0.55) saturate(1.1);
+}
+.pe-disclaimer {
+  font-family: var(--nf-sans), Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--pe-ink-soft);
+}
+.pe-strip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ------------------------------------------------------------------ */
+/* Campanha                                                             */
+/* ------------------------------------------------------------------ */
+.pe-gold-text {
+  background: linear-gradient(180deg, #fbe7b6 0%, #ecc57c 42%, #b98443 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.pe-white-text {
+  background: linear-gradient(180deg, #ffffff 0%, #f6ebe2 60%, #e3d2c6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.pe-offer {
+  position: relative;
+  border-radius: 56px;
+  background: linear-gradient(160deg, rgba(150, 82, 52, 0.72) 0%, rgba(95, 45, 26, 0.78) 100%);
+  box-shadow:
+    0 0 0 2px rgba(241, 205, 145, 0.55) inset,
+    0 30px 80px rgba(20, 8, 3, 0.45);
+  overflow: hidden;
+}
+.pe-offer-shine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0) 0%, rgba(255, 235, 200, 0.16) 50%, rgba(255, 255, 255, 0) 100%);
+}
+.pe-offer-number {
+  font-family: var(--nf-display), "Bodoni Moda", Georgia, serif;
+  font-weight: 500;
+  line-height: 0.95;
+  white-space: nowrap;
+}
+.pe-offer-line {
+  height: 2px;
+  background: linear-gradient(90deg, rgba(241, 205, 145, 0) 0%, rgba(241, 205, 145, 0.85) 50%, rgba(241, 205, 145, 0) 100%);
+}
+.pe-photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(31, 14, 7, 0.45) 0%,
+    rgba(31, 14, 7, 0.35) 30%,
+    rgba(31, 14, 7, 0.82) 72%,
+    rgba(31, 14, 7, 0.95) 100%
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Chamada para ação                                                    */
+/* ------------------------------------------------------------------ */
+.pe-qr-card {
+  background: #fffaf4;
+  border-radius: 40px;
+  box-shadow: 0 24px 60px rgba(20, 8, 3, 0.35);
+}
+.pe-phone {
+  font-family: var(--nf-display), "Bodoni Moda", Georgia, serif;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--pe-ink);
+}
+
+/* ------------------------------------------------------------------ */
+/* Contingência                                                         */
+/* ------------------------------------------------------------------ */
+.pe-contingency-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--pe-gold);
+  margin: 0 10px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Página da TV                                                         */
+/* ------------------------------------------------------------------ */
+.tv-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #1b0e08;
+  cursor: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.tv-debug {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 50;
+  max-width: 60%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font:
+    12px/1.45 ui-monospace,
+    Menlo,
+    Consolas,
+    monospace;
+  white-space: pre-wrap;
+  pointer-events: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Animações (CSS puro: continuam corretas mesmo se o navegador da TV  */
+/* reduzir o ritmo de quadros; somente opacity, transform e clip-path) */
+/* ------------------------------------------------------------------ */
+@keyframes pe-op-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pe-op-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes pe-zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes pe-rise-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 70px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes pe-mask-in {
+  from {
+    -webkit-clip-path: circle(0% at 50% 56%);
+    clip-path: circle(0% at 50% 56%);
+  }
+  to {
+    -webkit-clip-path: circle(80% at 50% 56%);
+    clip-path: circle(80% at 50% 56%);
+  }
+}
+@keyframes pe-rv-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes pe-rv-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pe-rv-zoom-soft {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes pe-rv-zoom {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes pe-rv-zoom-strong {
+  from {
+    opacity: 0;
+    transform: scale(0.84);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes pe-art-in {
+  from {
+    opacity: 0;
+    transform: scale(1.015);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes pe-kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+@keyframes pe-kenburns-soft {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+@keyframes pe-spin-cw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(7deg);
+  }
+}
+@keyframes pe-spin-ccw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-7deg);
+  }
+}
+@keyframes pe-shine {
+  0% {
+    transform: translate3d(-120%, 0, 0);
+  }
+  40% {
+    transform: translate3d(320%, 0, 0);
+  }
+  100% {
+    transform: translate3d(320%, 0, 0);
+  }
+}
+@keyframes pe-pulse {
+  from {
+    opacity: 0.55;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
