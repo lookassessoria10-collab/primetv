@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "meta": {
-    "revision": 2,
-    "version": "20261111-110800-r2",
-    "updatedAt": "2026-11-11T11:08:00.954Z",
-    "publishedAt": "2026-11-11T11:08:00.954Z"
+    "revision": 3,
+    "version": "20261111-112831-r3",
+    "updatedAt": "2026-11-11T11:28:31.222Z",
+    "publishedAt": "2026-11-11T11:28:31.222Z"
   },
   "settings": {
     "brandName": "Prime Esthetics",
@@ -37,18 +37,6 @@
       "autoCampaignEvery": 4,
       "active": true,
       "notes": "Nome e código de exemplo — ajuste conforme a unidade real. WhatsApp e endereço não foram informados."
-    },
-    {
-      "id": "un_4crkncd8",
-      "code": "unidade-centro-horizontal",
-      "name": "UNIDADE CENTRO HORIZONTAL",
-      "orientation": "landscape",
-      "rotation": 270,
-      "overscanPercent": 0,
-      "playlistId": "pl_eqv9v5za",
-      "fallbackPlaylistId": "pl_eqv9v5za",
-      "autoCampaignEvery": 4,
-      "active": true
     }
   ],
   "playlists": [
@@ -86,15 +74,6 @@
           "hidden": false
         },
         {
-          "id": "it_05",
-          "kind": "campaign",
-          "label": "Campanha em destaque",
-          "durationSec": 8,
-          "hidden": false,
-          "campaignIds": [],
-          "fallbackSlideId": "sl_contato"
-        },
-        {
           "id": "it_06",
           "kind": "slide",
           "slideId": "sl_pescoco",
@@ -123,15 +102,6 @@
           "hidden": false
         },
         {
-          "id": "it_10",
-          "kind": "campaign",
-          "label": "Campanha ou chamada para contato",
-          "durationSec": 8,
-          "hidden": false,
-          "campaignIds": [],
-          "fallbackSlideId": "sl_contato"
-        },
-        {
           "id": "it_11",
           "kind": "slide",
           "slideId": "sl_microvasos",
@@ -143,6 +113,12 @@
           "kind": "slide",
           "slideId": "sl_encerramento",
           "durationSec": 8,
+          "hidden": false
+        },
+        {
+          "id": "it_5ycnxrrx",
+          "kind": "slide",
+          "slideId": "sl_bf_condicao",
           "hidden": false
         }
       ]
@@ -560,6 +536,21 @@
     }
   ],
   "campaigns": [
+    {
+      "id": "cmp_azn6fmmy",
+      "name": "Nova campanha",
+      "description": "",
+      "status": "draft",
+      "theme": "",
+      "schedule": {},
+      "scope": "global",
+      "unitIds": [],
+      "items": [],
+      "priority": 5,
+      "weight": 1,
+      "createdAt": "2026-11-11T11:25:52.522Z",
+      "updatedAt": "2026-11-11T11:25:52.522Z"
+    },
     {
       "id": "cmp_bf_esquenta",
       "name": "Esquenta Prime Black Friday",
