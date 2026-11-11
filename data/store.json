@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "meta": {
-    "revision": 1,
-    "version": "demo-inicial",
-    "updatedAt": "2026-10-16T20:54:03.177Z",
-    "publishedAt": "2026-10-16T20:54:03.177Z"
+    "revision": 2,
+    "version": "20261111-110800-r2",
+    "updatedAt": "2026-11-11T11:08:00.954Z",
+    "publishedAt": "2026-11-11T11:08:00.954Z"
   },
   "settings": {
     "brandName": "Prime Esthetics",
@@ -37,6 +37,18 @@
       "autoCampaignEvery": 4,
       "active": true,
       "notes": "Nome e código de exemplo — ajuste conforme a unidade real. WhatsApp e endereço não foram informados."
+    },
+    {
+      "id": "un_4crkncd8",
+      "code": "unidade-centro-horizontal",
+      "name": "UNIDADE CENTRO HORIZONTAL",
+      "orientation": "landscape",
+      "rotation": 270,
+      "overscanPercent": 0,
+      "playlistId": "pl_eqv9v5za",
+      "fallbackPlaylistId": "pl_eqv9v5za",
+      "autoCampaignEvery": 4,
+      "active": true
     }
   ],
   "playlists": [
@@ -169,18 +181,113 @@
           "hidden": false
         }
       ]
+    },
+    {
+      "id": "pl_eqv9v5za",
+      "name": "UNIDADE CENTRO HORIZONTAL — programação",
+      "description": "Criada a partir de \"Programação principal\".",
+      "items": [
+        {
+          "id": "it_nyq6dbp9",
+          "kind": "slide",
+          "slideId": "sl_abertura",
+          "durationSec": 5,
+          "hidden": false
+        },
+        {
+          "id": "it_ny9bddg4",
+          "kind": "slide",
+          "slideId": "sl_editorial",
+          "durationSec": 7,
+          "hidden": false
+        },
+        {
+          "id": "it_he374qcs",
+          "kind": "slide",
+          "slideId": "sl_papada",
+          "durationSec": 10,
+          "hidden": false
+        },
+        {
+          "id": "it_prtbjwi4",
+          "kind": "slide",
+          "slideId": "sl_labial_destaque",
+          "durationSec": 7,
+          "hidden": false
+        },
+        {
+          "id": "it_vbzs4r7m",
+          "kind": "campaign",
+          "label": "Campanha em destaque",
+          "durationSec": 8,
+          "hidden": false,
+          "campaignIds": [],
+          "fallbackSlideId": "sl_contato"
+        },
+        {
+          "id": "it_vswsz95a",
+          "kind": "slide",
+          "slideId": "sl_pescoco",
+          "durationSec": 10,
+          "hidden": false
+        },
+        {
+          "id": "it_bxiw4qpa",
+          "kind": "slide",
+          "slideId": "sl_institucional",
+          "durationSec": 6,
+          "hidden": false
+        },
+        {
+          "id": "it_vuia6izw",
+          "kind": "slide",
+          "slideId": "sl_labial",
+          "durationSec": 10,
+          "hidden": false
+        },
+        {
+          "id": "it_jixet52b",
+          "kind": "slide",
+          "slideId": "sl_microvasos_destaque",
+          "durationSec": 10,
+          "hidden": false
+        },
+        {
+          "id": "it_2iuz4wdu",
+          "kind": "campaign",
+          "label": "Campanha ou chamada para contato",
+          "durationSec": 8,
+          "hidden": false,
+          "campaignIds": [],
+          "fallbackSlideId": "sl_contato"
+        },
+        {
+          "id": "it_sxgt854y",
+          "kind": "slide",
+          "slideId": "sl_microvasos",
+          "durationSec": 10,
+          "hidden": false
+        },
+        {
+          "id": "it_uy8rh4m7",
+          "kind": "slide",
+          "slideId": "sl_encerramento",
+          "durationSec": 8,
+          "hidden": false
+        }
+      ]
     }
   ],
   "slides": [
     {
       "id": "sl_abertura",
       "name": "Abertura institucional",
-      "type": "institutional",
       "durationSec": 5,
       "transition": "fade",
       "status": "active",
       "createdAt": "2026-10-16T20:54:03.177Z",
       "updatedAt": "2026-10-16T20:54:03.177Z",
+      "type": "institutional",
       "data": {
         "variant": "opening",
         "eyebrow": "",
@@ -194,12 +301,12 @@
     {
       "id": "sl_editorial",
       "name": "Mensagem editorial — características únicas",
-      "type": "institutional",
       "durationSec": 7,
       "transition": "rise",
       "status": "active",
       "createdAt": "2026-10-16T20:54:03.177Z",
       "updatedAt": "2026-10-16T20:54:03.177Z",
+      "type": "institutional",
       "data": {
         "variant": "message",
         "eyebrow": "Cuidado individual",
@@ -213,12 +320,12 @@
     {
       "id": "sl_papada",
       "name": "Resultado — Ultraformer MPT Papada",
-      "type": "art",
       "durationSec": 10,
       "transition": "dissolve",
       "status": "active",
       "createdAt": "2026-10-16T20:54:03.177Z",
       "updatedAt": "2026-10-16T20:54:03.177Z",
+      "type": "art",
       "data": {
         "mediaId": "med_papada",
         "background": "brand",
@@ -229,12 +336,12 @@
     {
       "id": "sl_labial_destaque",
       "name": "Destaque — Preenchimento labial",
-      "type": "procedure",
       "durationSec": 7,
       "transition": "zoom",
       "status": "active",
       "createdAt": "2026-10-16T20:54:03.177Z",
       "updatedAt": "2026-10-16T20:54:03.177Z",
+      "type": "procedure",
       "data": {
         "eyebrow": "Procedimento",
         "title": "Preenchimento labial",
@@ -247,12 +354,12 @@
     {
       "id": "sl_pescoco",
       "name": "Resultado — Ultraformer MPT Pescoço",
-      "type": "art",
       "durationSec": 10,
       "transition": "dissolve",
       "status": "active",
       "createdAt": "2026-10-16T20:54:03.177Z",
       "updatedAt": "2026-10-16T20:54:03.177Z",
+      "type": "art",
       "data": {
         "mediaId": "med_pescoco",
         "background": "brand",
@@ -263,12 +370,12 @@
     {
       "id": "sl_institucional",
       "name": "Institucional — ocasiões especiais",
-      "type": "art",
       "durationSec": 6,
       "transition": "dissolve",
       "status": "active",
       "createdAt": "2026-10-16T20:54:03.177Z",
       "updatedAt": "2026-10-16T20:54:03.177Z",
+      "type": "art",
       "data": {
         "mediaId": "med_institucional",
         "background": "brand",
@@ -279,12 +386,12 @@
     {
       "id": "sl_labial",
       "name": "Resultado — Preenchimento labial",
-      "type": "art",
       "durationSec": 10,
       "transition": "dissolve",
       "status": "active",
       "createdAt": "2026-10-16T20:54:03.177Z",
       "updatedAt": "2026-10-16T20:54:03.177Z",
+      "type": "art",
       "data": {
         "mediaId": "med_labial",
         "background": "brand",
@@ -295,12 +402,12 @@
     {
       "id": "sl_microvasos_destaque",
       "name": "Destaque — Microvasos ou PEIM",
-      "type": "procedure",
       "durationSec": 10,
       "transition": "zoom",
       "status": "active",
       "createdAt": "2026-10-16T20:54:03.177Z",
       "updatedAt": "2026-10-16T20:54:03.177Z",
+      "type": "procedure",
       "data": {
         "eyebrow": "Procedimento",
         "title": "Microvasos ou PEIM",
@@ -313,12 +420,12 @@
     {
       "id": "sl_microvasos",
       "name": "Resultado — Microvasos ou PEIM",
-      "type": "art",
       "durationSec": 10,
       "transition": "dissolve",
       "status": "active",
       "createdAt": "2026-10-16T20:54:03.177Z",
       "updatedAt": "2026-10-16T20:54:03.177Z",
+      "type": "art",
       "data": {
         "mediaId": "med_microvasos",
         "background": "brand",
@@ -329,12 +436,12 @@
     {
       "id": "sl_contato",
       "name": "Chamada para contato",
-      "type": "cta",
       "durationSec": 8,
       "transition": "rise",
       "status": "active",
       "createdAt": "2026-10-16T20:54:03.177Z",
       "updatedAt": "2026-10-16T20:54:03.177Z",
+      "type": "cta",
       "data": {
         "eyebrow": "Fale com a Prime",
         "title": "O seu próximo cuidado pode começar *hoje*.",
@@ -349,12 +456,12 @@
     {
       "id": "sl_encerramento",
       "name": "Encerramento — convite à avaliação",
-      "type": "institutional",
       "durationSec": 8,
       "transition": "mask",
       "status": "active",
       "createdAt": "2026-10-16T20:54:03.177Z",
       "updatedAt": "2026-10-16T20:54:03.177Z",
+      "type": "institutional",
       "data": {
         "variant": "closing",
         "eyebrow": "",
@@ -368,12 +475,12 @@
     {
       "id": "sl_bf_oferta",
       "name": "Black Friday — oferta 30% OFF",
-      "type": "promo",
       "durationSec": 8,
       "transition": "zoom",
       "status": "active",
       "createdAt": "2026-10-16T20:54:03.177Z",
       "updatedAt": "2026-10-16T20:54:03.177Z",
+      "type": "promo",
       "data": {
         "eyebrow": "Esquenta Prime Black Friday",
         "headline": "Quer conhecer os procedimentos *participantes*?",
@@ -390,12 +497,12 @@
     {
       "id": "sl_bf_nao_esperar",
       "name": "Black Friday — Você não precisa esperar",
-      "type": "art",
       "durationSec": 8,
       "transition": "dissolve",
       "status": "active",
       "createdAt": "2026-10-16T20:54:03.177Z",
       "updatedAt": "2026-10-16T20:54:03.177Z",
+      "type": "art",
       "data": {
         "mediaId": "med_bf_nao_esperar",
         "background": "brand",
@@ -406,12 +513,12 @@
     {
       "id": "sl_bf_resultados",
       "name": "Black Friday — Resultados bonitos começam antes",
-      "type": "art",
       "durationSec": 8,
       "transition": "dissolve",
       "status": "active",
       "createdAt": "2026-10-16T20:54:03.177Z",
       "updatedAt": "2026-10-16T20:54:03.177Z",
+      "type": "art",
       "data": {
         "mediaId": "med_bf_resultados",
         "background": "brand",
@@ -422,12 +529,12 @@
     {
       "id": "sl_bf_condicao",
       "name": "Black Friday — Condição especial",
-      "type": "art",
       "durationSec": 8,
       "transition": "dissolve",
       "status": "active",
       "createdAt": "2026-10-16T20:54:03.177Z",
       "updatedAt": "2026-10-16T20:54:03.177Z",
+      "type": "art",
       "data": {
         "mediaId": "med_bf_condicao",
         "background": "brand",
@@ -438,12 +545,12 @@
     {
       "id": "sl_bf_quer_saber",
       "name": "Black Friday — Quer saber quais protocolos",
-      "type": "art",
       "durationSec": 8,
       "transition": "dissolve",
       "status": "active",
       "createdAt": "2026-10-16T20:54:03.177Z",
       "updatedAt": "2026-10-16T20:54:03.177Z",
+      "type": "art",
       "data": {
         "mediaId": "med_bf_quer_saber",
         "background": "brand",
@@ -491,279 +598,279 @@
       "kind": "image",
       "storage": "repo",
       "path": "media/seed/ultraformer-mpt-papada.webp",
-      "tags": [],
-      "mime": "image/webp",
-      "focalX": 50,
-      "focalY": 50,
-      "status": "active",
-      "createdAt": "2026-10-16T20:54:03.177Z",
-      "updatedAt": "2026-10-16T20:54:03.177Z",
       "name": "Ultraformer MPT Papada — antes e depois",
       "category": "resultado",
       "procedure": "Ultraformer MPT",
+      "tags": [],
       "width": 1080,
       "height": 1920,
       "bytes": 111920,
+      "mime": "image/webp",
       "hasText": true,
+      "focalX": 50,
+      "focalY": 50,
+      "status": "active",
       "clinical": {
         "isClinical": true,
         "consent": "authorized",
         "reviewedBy": "Importação inicial",
         "notes": "Importado do material Prime TV fornecido pela clínica para exibição. Registre aqui a referência do termo de autorização de uso de imagem."
-      }
+      },
+      "createdAt": "2026-10-16T20:54:03.177Z",
+      "updatedAt": "2026-10-16T20:54:03.177Z"
     },
     {
       "id": "med_pescoco",
       "kind": "image",
       "storage": "repo",
       "path": "media/seed/ultraformer-mpt-pescoco.webp",
-      "tags": [],
-      "mime": "image/webp",
-      "focalX": 50,
-      "focalY": 50,
-      "status": "active",
-      "createdAt": "2026-10-16T20:54:03.177Z",
-      "updatedAt": "2026-10-16T20:54:03.177Z",
       "name": "Ultraformer MPT Pescoço — antes e depois",
       "category": "resultado",
       "procedure": "Ultraformer MPT",
+      "tags": [],
       "width": 1080,
       "height": 1920,
       "bytes": 135960,
+      "mime": "image/webp",
       "hasText": true,
+      "focalX": 50,
+      "focalY": 50,
+      "status": "active",
       "clinical": {
         "isClinical": true,
         "consent": "authorized",
         "reviewedBy": "Importação inicial",
         "notes": "Importado do material Prime TV fornecido pela clínica para exibição. Registre aqui a referência do termo de autorização de uso de imagem."
-      }
+      },
+      "createdAt": "2026-10-16T20:54:03.177Z",
+      "updatedAt": "2026-10-16T20:54:03.177Z"
     },
     {
       "id": "med_labial",
       "kind": "image",
       "storage": "repo",
       "path": "media/seed/preenchimento-labial.webp",
-      "tags": [],
-      "mime": "image/webp",
-      "focalX": 50,
-      "focalY": 50,
-      "status": "active",
-      "createdAt": "2026-10-16T20:54:03.177Z",
-      "updatedAt": "2026-10-16T20:54:03.177Z",
       "name": "Preenchimento labial — antes e depois",
       "category": "resultado",
       "procedure": "Preenchimento labial",
+      "tags": [],
       "width": 1080,
       "height": 1920,
       "bytes": 105914,
+      "mime": "image/webp",
       "hasText": true,
+      "focalX": 50,
+      "focalY": 50,
+      "status": "active",
       "clinical": {
         "isClinical": true,
         "consent": "authorized",
         "reviewedBy": "Importação inicial",
         "notes": "Importado do material Prime TV fornecido pela clínica para exibição. Registre aqui a referência do termo de autorização de uso de imagem."
-      }
+      },
+      "createdAt": "2026-10-16T20:54:03.177Z",
+      "updatedAt": "2026-10-16T20:54:03.177Z"
     },
     {
       "id": "med_microvasos",
       "kind": "image",
       "storage": "repo",
       "path": "media/seed/microvasos-peim.webp",
-      "tags": [],
-      "mime": "image/webp",
-      "focalX": 50,
-      "focalY": 50,
-      "status": "active",
-      "createdAt": "2026-10-16T20:54:03.177Z",
-      "updatedAt": "2026-10-16T20:54:03.177Z",
       "name": "Microvasos ou PEIM — antes e depois",
       "category": "resultado",
       "procedure": "Microvasos (PEIM)",
+      "tags": [],
       "width": 1080,
       "height": 1920,
       "bytes": 131664,
+      "mime": "image/webp",
       "hasText": true,
+      "focalX": 50,
+      "focalY": 50,
+      "status": "active",
       "clinical": {
         "isClinical": true,
         "consent": "authorized",
         "reviewedBy": "Importação inicial",
         "notes": "Importado do material Prime TV fornecido pela clínica para exibição. Registre aqui a referência do termo de autorização de uso de imagem."
-      }
+      },
+      "createdAt": "2026-10-16T20:54:03.177Z",
+      "updatedAt": "2026-10-16T20:54:03.177Z"
     },
     {
       "id": "med_institucional",
       "kind": "image",
       "storage": "repo",
       "path": "media/seed/institucional-ocasioes-especiais.webp",
-      "tags": [],
-      "mime": "image/webp",
-      "focalX": 50,
-      "focalY": 50,
-      "status": "active",
-      "createdAt": "2026-10-16T20:54:03.177Z",
-      "updatedAt": "2026-10-16T20:54:03.177Z",
       "name": "Institucional — formatura, festa ou evento especial",
       "category": "institucional",
+      "tags": [],
       "width": 1080,
       "height": 1920,
       "bytes": 142638,
+      "mime": "image/webp",
       "hasText": true,
+      "focalX": 50,
+      "focalY": 50,
+      "status": "active",
       "clinical": {
         "isClinical": false,
         "consent": "pending"
-      }
+      },
+      "createdAt": "2026-10-16T20:54:03.177Z",
+      "updatedAt": "2026-10-16T20:54:03.177Z"
     },
     {
       "id": "med_bf_quer_saber",
       "kind": "image",
       "storage": "repo",
       "path": "media/seed/black-friday-quer-saber.webp",
+      "name": "Black Friday — Quer saber quais protocolos",
+      "category": "campanha",
       "tags": [
         "black friday"
       ],
-      "mime": "image/webp",
-      "focalX": 50,
-      "focalY": 50,
-      "status": "active",
-      "createdAt": "2026-10-16T20:54:03.177Z",
-      "updatedAt": "2026-10-16T20:54:03.177Z",
-      "name": "Black Friday — Quer saber quais protocolos",
-      "category": "campanha",
       "width": 941,
       "height": 1672,
       "bytes": 226434,
+      "mime": "image/webp",
       "hasText": true,
+      "focalX": 50,
+      "focalY": 50,
+      "status": "active",
       "clinical": {
         "isClinical": false,
         "consent": "pending"
-      }
+      },
+      "createdAt": "2026-10-16T20:54:03.177Z",
+      "updatedAt": "2026-10-16T20:54:03.177Z"
     },
     {
       "id": "med_bf_condicao",
       "kind": "image",
       "storage": "repo",
       "path": "media/seed/condicao-especial-30-off.webp",
+      "name": "Black Friday — Condição especial 30% OFF",
+      "category": "campanha",
       "tags": [
         "black friday"
       ],
-      "mime": "image/webp",
-      "focalX": 50,
-      "focalY": 50,
-      "status": "active",
-      "createdAt": "2026-10-16T20:54:03.177Z",
-      "updatedAt": "2026-10-16T20:54:03.177Z",
-      "name": "Black Friday — Condição especial 30% OFF",
-      "category": "campanha",
       "width": 941,
       "height": 1672,
       "bytes": 114964,
+      "mime": "image/webp",
       "hasText": true,
+      "focalX": 50,
+      "focalY": 50,
+      "status": "active",
       "clinical": {
         "isClinical": false,
         "consent": "pending"
-      }
+      },
+      "createdAt": "2026-10-16T20:54:03.177Z",
+      "updatedAt": "2026-10-16T20:54:03.177Z"
     },
     {
       "id": "med_bf_resultados",
       "kind": "image",
       "storage": "repo",
       "path": "media/seed/black-friday-resultados-bonitos.webp",
+      "name": "Black Friday — Resultados bonitos começam antes",
+      "category": "campanha",
       "tags": [
         "black friday"
       ],
-      "mime": "image/webp",
-      "focalX": 50,
-      "focalY": 50,
-      "status": "active",
-      "createdAt": "2026-10-16T20:54:03.177Z",
-      "updatedAt": "2026-10-16T20:54:03.177Z",
-      "name": "Black Friday — Resultados bonitos começam antes",
-      "category": "campanha",
       "width": 941,
       "height": 1672,
       "bytes": 230006,
+      "mime": "image/webp",
       "hasText": true,
+      "focalX": 50,
+      "focalY": 50,
+      "status": "active",
       "clinical": {
         "isClinical": false,
         "consent": "pending"
-      }
+      },
+      "createdAt": "2026-10-16T20:54:03.177Z",
+      "updatedAt": "2026-10-16T20:54:03.177Z"
     },
     {
       "id": "med_bf_nao_esperar",
       "kind": "image",
       "storage": "repo",
       "path": "media/seed/black-friday-nao-precisa-esperar.webp",
+      "name": "Black Friday — Você não precisa esperar",
+      "category": "campanha",
       "tags": [
         "black friday"
       ],
-      "mime": "image/webp",
-      "focalX": 50,
-      "focalY": 50,
-      "status": "active",
-      "createdAt": "2026-10-16T20:54:03.177Z",
-      "updatedAt": "2026-10-16T20:54:03.177Z",
-      "name": "Black Friday — Você não precisa esperar",
-      "category": "campanha",
       "width": 941,
       "height": 1672,
       "bytes": 166570,
+      "mime": "image/webp",
       "hasText": true,
+      "focalX": 50,
+      "focalY": 50,
+      "status": "active",
       "clinical": {
         "isClinical": false,
         "consent": "pending"
-      }
+      },
+      "createdAt": "2026-10-16T20:54:03.177Z",
+      "updatedAt": "2026-10-16T20:54:03.177Z"
     },
     {
       "id": "med_labial_foto",
       "kind": "image",
       "storage": "repo",
       "path": "media/seed/preenchimento-labial-foto.webp",
-      "tags": [],
-      "mime": "image/webp",
-      "focalX": 50,
-      "focalY": 45,
-      "status": "active",
-      "createdAt": "2026-10-16T20:54:03.177Z",
-      "updatedAt": "2026-10-16T20:54:03.177Z",
       "name": "Preenchimento labial — foto (recorte do resultado)",
       "category": "procedimento",
       "procedure": "Preenchimento labial",
+      "tags": [],
       "width": 904,
       "height": 920,
       "bytes": 43090,
+      "mime": "image/webp",
       "hasText": false,
+      "focalX": 50,
+      "focalY": 45,
+      "status": "active",
       "clinical": {
         "isClinical": true,
         "consent": "authorized",
         "reviewedBy": "Importação inicial",
         "notes": "Importado do material Prime TV fornecido pela clínica para exibição. Registre aqui a referência do termo de autorização de uso de imagem."
-      }
+      },
+      "createdAt": "2026-10-16T20:54:03.177Z",
+      "updatedAt": "2026-10-16T20:54:03.177Z"
     },
     {
       "id": "med_microvasos_foto",
       "kind": "image",
       "storage": "repo",
       "path": "media/seed/microvasos-foto.webp",
-      "tags": [],
-      "mime": "image/webp",
-      "focalX": 40,
-      "focalY": 50,
-      "status": "active",
-      "createdAt": "2026-10-16T20:54:03.177Z",
-      "updatedAt": "2026-10-16T20:54:03.177Z",
       "name": "Microvasos — foto (recorte do resultado)",
       "category": "procedimento",
       "procedure": "Microvasos (PEIM)",
+      "tags": [],
       "width": 1740,
       "height": 890,
       "bytes": 82282,
+      "mime": "image/webp",
       "hasText": false,
+      "focalX": 40,
+      "focalY": 50,
+      "status": "active",
       "clinical": {
         "isClinical": true,
         "consent": "authorized",
         "reviewedBy": "Importação inicial",
         "notes": "Importado do material Prime TV fornecido pela clínica para exibição. Registre aqui a referência do termo de autorização de uso de imagem."
-      }
+      },
+      "createdAt": "2026-10-16T20:54:03.177Z",
+      "updatedAt": "2026-10-16T20:54:03.177Z"
     }
   ],
   "templates": []
