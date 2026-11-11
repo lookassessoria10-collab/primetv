@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "meta": {
-    "revision": 3,
-    "version": "20261111-112831-r3",
-    "updatedAt": "2026-11-11T11:28:31.222Z",
-    "publishedAt": "2026-11-11T11:28:31.222Z"
+    "revision": 4,
+    "version": "20261111-113058-r4",
+    "updatedAt": "2026-11-11T11:30:58.655Z",
+    "publishedAt": "2026-11-11T11:30:58.655Z"
   },
   "settings": {
     "brandName": "Prime Esthetics",
@@ -27,8 +27,8 @@
   "units": [
     {
       "id": "un_centro",
-      "code": "unidade-centro",
-      "name": "Unidade Centro",
+      "code": "salvador-vertical",
+      "name": "SALVADOR",
       "orientation": "portrait",
       "rotation": 0,
       "overscanPercent": 0,
@@ -37,6 +37,18 @@
       "autoCampaignEvery": 4,
       "active": true,
       "notes": "Nome e código de exemplo — ajuste conforme a unidade real. WhatsApp e endereço não foram informados."
+    },
+    {
+      "id": "un_ajb5hw3r",
+      "code": "salvador-horizontal",
+      "name": "SALVADOR - HORIZONTAL",
+      "orientation": "landscape",
+      "rotation": 0,
+      "overscanPercent": 0,
+      "playlistId": "pl_eqv9v5za",
+      "fallbackPlaylistId": "pl_institucional",
+      "autoCampaignEvery": 4,
+      "active": true
     }
   ],
   "playlists": [
@@ -249,6 +261,89 @@
           "kind": "slide",
           "slideId": "sl_encerramento",
           "durationSec": 8,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "pl_44k3w6wp",
+      "name": "SALVADOR - HORIZONTAL — programação",
+      "description": "Criada a partir de \"Programação principal\".",
+      "items": [
+        {
+          "id": "it_3sz6k98y",
+          "kind": "slide",
+          "slideId": "sl_abertura",
+          "durationSec": 5,
+          "hidden": false
+        },
+        {
+          "id": "it_nrccdv56",
+          "kind": "slide",
+          "slideId": "sl_editorial",
+          "durationSec": 7,
+          "hidden": false
+        },
+        {
+          "id": "it_eyyuybre",
+          "kind": "slide",
+          "slideId": "sl_papada",
+          "durationSec": 10,
+          "hidden": false
+        },
+        {
+          "id": "it_7475m6zf",
+          "kind": "slide",
+          "slideId": "sl_labial_destaque",
+          "durationSec": 7,
+          "hidden": false
+        },
+        {
+          "id": "it_kznhzdb2",
+          "kind": "slide",
+          "slideId": "sl_pescoco",
+          "durationSec": 10,
+          "hidden": false
+        },
+        {
+          "id": "it_xn4ypghc",
+          "kind": "slide",
+          "slideId": "sl_institucional",
+          "durationSec": 6,
+          "hidden": false
+        },
+        {
+          "id": "it_qk7xv8dh",
+          "kind": "slide",
+          "slideId": "sl_labial",
+          "durationSec": 10,
+          "hidden": false
+        },
+        {
+          "id": "it_fis7xdmm",
+          "kind": "slide",
+          "slideId": "sl_microvasos_destaque",
+          "durationSec": 10,
+          "hidden": false
+        },
+        {
+          "id": "it_j3j5a3iy",
+          "kind": "slide",
+          "slideId": "sl_microvasos",
+          "durationSec": 10,
+          "hidden": false
+        },
+        {
+          "id": "it_usfbep4m",
+          "kind": "slide",
+          "slideId": "sl_encerramento",
+          "durationSec": 8,
+          "hidden": false
+        },
+        {
+          "id": "it_crp93z9j",
+          "kind": "slide",
+          "slideId": "sl_bf_condicao",
           "hidden": false
         }
       ]
